@@ -1,3 +1,4 @@
+---
 # Gitpod Configuration
 # ver: https://www.gitpod.io/docs/introduction/learn-gitpod/gitpod-yaml
 
@@ -9,11 +10,13 @@ image: gitpod/workspace-java-17
 tasks:
 
   - name: Compila proyecto sin ejecutar pruebas
-    # before se ejecuta siempre
-    # init se ejecuta solo la primera vez
+# before se ejecuta siempre
+# init se ejecuta solo la primera vez
     before: |
-      sdk install springboot 
       sdk install java 22.fx-zulu < /dev/null
+      sdk install maven < /dev/null
+      sdk install mvnd < /dev/null
+      sdk install springboot < /dev/null
     init: |
       if [ -f pom.xml ]; then mvn package -DskipTests; fi
     command: |

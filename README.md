@@ -1,3 +1,5 @@
-# Java Starter project
+# Proyecto de Ejemplo
 
-Empty repository to start Java projects in Gitpod
+Proyecto de ejemplo, con funcionalidad mínima y sin uso de bases de datos, para usar en tutoriales de despliegue continuo.
+
+
