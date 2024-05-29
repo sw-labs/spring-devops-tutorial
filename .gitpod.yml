@@ -12,9 +12,10 @@ tasks:
     # before se ejecuta siempre
     # init se ejecuta solo la primera vez
     before: |
+      sdk default java 22.fx-zulu
+    init: |
       sdk install springboot 
       sdk install java 22.fx-zulu < /dev/null
-    init: |
       if [ -f pom.xml ]; then mvn package -DskipTests; fi
     command: |
       if [ -f docker-compose.yml ]; then docker compose up -d; fi
