@@ -1,0 +1,6 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+
+    "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/current",
+    "spring-boot.ls.java.home": "/home/gitpod/.sdkman/candidates/java/current"
+}
