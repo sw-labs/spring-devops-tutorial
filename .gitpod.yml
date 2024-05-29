@@ -14,8 +14,10 @@ tasks:
     before: |
       sdk default java 22.fx-zulu
     init: |
-      sdk install springboot 
+      sdk install maven
+      sdk install mvnd
       sdk install java 22.fx-zulu < /dev/null
+      sdk install springboot 
       if [ -f pom.xml ]; then mvn package -DskipTests; fi
     command: |
       if [ -f docker-compose.yml ]; then docker compose up -d; fi
